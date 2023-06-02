@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+      "target": "https://api-rest-restaurantec-production-6b65.up.railway.app/",
+      "secure": false,
+      "logLevel": "debug"
+    }
+  }

@@ -1,0 +1,33 @@
+<div class="container" style="margin-top : 22px;">
+
+  <h2>Buscador</h2>
+
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Buscar..." [ngModelOptions]="{standalone: true}">
+  </div>
+  <button class="btn btn-primary mt-2" (click)="search()">Buscar</button>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Cantidad</th>
+      <th>Costo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let platillo of platillos">
+      <td>{{ platillo.id }}</td>
+      <td>{{ platillo.nombre }}</td>
+      <td>{{ platillo.descripcion }}</td>
+      <td>{{ platillo.cantidad }}</td>
+      <td>{{ platillo.costo }}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
